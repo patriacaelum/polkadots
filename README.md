@@ -21,8 +21,8 @@ The required programs for my config are:
   keyboard is faster.
 - [python][python] is used to switch backgrounds. I am also mostly a python
   developer.
-  - [pillow] is the python imaging library, and required to format the
-    background images.
+  - [pillow][python-pillow] is an python imaging library, and required to format
+    the background images.
 - [zsh][zsh] is my shell of choice.
   - [p10k][zsh-p10k] is a very nice zsh theme.
   - [zsh-autosuggestions][zsh-autosuggestions]
@@ -35,6 +35,7 @@ The required programs for my config are:
 [fontawesome]: https://fontawesome.com
 [i3wm]: https://i3wm.org
 [ia-fonts]: https://github.com/iaolo/iA-Fonts
+[kitty]: https://sw.kovidgoyal.net/kitty
 [polybar]: https://polybar.github.io
 [python]: https://python.org
 [python-pillow]: https://python-pillow.org
