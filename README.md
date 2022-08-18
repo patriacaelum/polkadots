@@ -33,6 +33,7 @@ The required programs for my config are:
 [duospace]: https://ia.net/topics/in-search-of-the-perfect-writing-font
 [feh]: https://feh.finalrewind.org
 [fontawesome]: https://fontawesome.com
+[i3wm]: https://i3wm.org
 [ia-fonts]: https://github.com/iaolo/iA-Fonts
 [polybar]: https://polybar.github.io
 [python]: https://python.org
