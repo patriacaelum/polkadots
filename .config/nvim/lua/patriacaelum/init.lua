@@ -17,6 +17,9 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
+-- Autosave
+vim.api.nvim_create_autocmd({"FocusLost"}, {command = "silent! wa"})
+
 
 -- Installed plugins
 require("lazy").setup({
