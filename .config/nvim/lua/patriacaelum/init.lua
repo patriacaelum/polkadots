@@ -17,8 +17,12 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
+
 -- Autosave
-vim.api.nvim_create_autocmd({"FocusLost"}, {command = "silent! wa"})
+vim.api.nvim_create_autocmd(
+    { "FocusLost", "TextChanged", "TextChangedI", "TextYankPost" },
+    { command = "silent! wa" }
+)
 
 
 -- Installed plugins
@@ -31,6 +35,11 @@ require("lazy").setup({
             vim.o.timeoutlen = 300
         end,
         lazy = true,
+    },
+    {
+        "kevinhwang91/nvim-ufo",
+        dependencies = { "kevinhwang91/promise-async" },
+        event = { "BufReadPre", "BufNewFile" },
     },
     {
         "lewis6991/gitsigns.nvim",
@@ -87,6 +96,7 @@ require("lazy").setup({
         "olimorris/onedarkpro.nvim",
         priority = 1000,
     },
+    { "terrortylor/nvim-comment" },
     {
         "tpope/vim-fugitive",
         lazy = true,

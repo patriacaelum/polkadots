@@ -1,6 +1,11 @@
 -- folke/which-key.nvim
 require("which-key").register(
     {
+        b = {
+            name = "+buffer",
+            d = { "<cmd>bd<cr>", "Delete Buffer" },
+            w = { "<cmd>bw<cr>", "Wipeout Buffer" },
+        },
         c = {
             name = "+code",
             R = { "<cmd>LspRestart<cr>", "Restart LSP" },
@@ -47,6 +52,14 @@ require("which-key").register(
         t = {
             c = { "<cmd>NvimTreeCollapse<cr>", "Tree Collapse" },
             f = { "<cmd>NvimTreeFocus<cr>", "Tree Focus" },
+            p = {
+                "<cmd>lua require('nvim-tree.api').node.navigate.parent()<cr>",
+                "Tree Parent Directory",
+            },
+            s = {
+                "<cmd>lua require('nvim-tree.api').tree.search_node()<cr>",
+                "Tree Search",
+            },
             t = { "<cmd>NvimTreeToggle<cr>", "Tree Toggle" },
         },
         u = {
@@ -70,6 +83,16 @@ require("which-key").register(
             t = { "<cmd>tabnew<cr>", "New Tab" },
             v = { "<C-w>s", "New window Vertical" },
             w = { "<cmd>tabclose<cr>", "Close Tab" },
+        },
+        x = {
+            name = "+comment",
+            l = { "<cmd>CommentToggle<cr>", "Comment Line" },
+            s = { "<cmd>'<,'>CommentToggle<cr>", "Comment Selection" },
+        },
+        z = {
+            name = "+fold",
+            o = { "<cmd>lua require('ufo').openAllFolds<cr>", "Open all folds" },
+            c = { "<cmd>lua require('ufo').closeAllFolds<cr>", "Close all folds" },
         },
     },
     { prefix = "<leader>" }
